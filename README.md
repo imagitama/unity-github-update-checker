@@ -79,7 +79,7 @@ The interval (in ms) for auto-checking. See rate-limiting section.
 
 ### States state
 
-The state of the script - waiting/idle, checking for releases, error.
+The state of the script - waiting, idle, checking for releases, downloading, error.
 
 ### Release availableRelease
 

@@ -267,6 +267,14 @@ public class GitHub_Update_Checker {
 
     void RenderText(string text) {
         var labelStyle = new GUIStyle(GUI.skin.label) {
+            alignment = TextAnchor.UpperCenter
+        };
+
+        GUILayout.Label(text, labelStyle);
+    }
+
+    void RenderLargeText(string text) {
+        var labelStyle = new GUIStyle(GUI.skin.label) {
             fontSize = 16,
             alignment = TextAnchor.UpperCenter
         };
@@ -310,7 +318,7 @@ public class GitHub_Update_Checker {
                 break;
             default:
                 if (availableRelease != null) {
-                    RenderText("A newer version is available: " + availableRelease.TagName);
+                    RenderLargeText("A newer version is available: " + availableRelease.TagName);
 
                     RenderGap();
 
