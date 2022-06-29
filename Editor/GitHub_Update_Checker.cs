@@ -278,6 +278,14 @@ public class GitHub_Update_Checker {
             fontSize = 16,
             alignment = TextAnchor.UpperCenter
         };
+        GUILayout.Label(text, labelStyle);
+    }
+
+    void RenderDisabledText(string text) {
+        var labelStyle = new GUIStyle(GUI.skin.label) {
+            alignment = TextAnchor.UpperCenter
+        };
+        labelStyle.normal.textColor = new Color(1.0f, 1.0f, 1.0f, 0.5f);
 
         GUILayout.Label(text, labelStyle);
     }
@@ -302,14 +310,14 @@ public class GitHub_Update_Checker {
 
         switch (state) {
             case States.Waiting:
-                RenderText("Waiting to check for updates...");
+                RenderDisabledText("Waiting to check for updates...");
                 return;
             case States.Checking:
                 RenderText("Checking for updates...");
                 RenderGap();
                 break;
             case States.Error:
-                RenderText("Failed to check for updates");
+                RenderDisabledText("Failed to check for updates");
                 RenderGap();
                 break;
             case States.Downloading:

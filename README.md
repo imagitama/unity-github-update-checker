@@ -8,7 +8,7 @@ A Unity script that checks if a newer release of your Unity plugin is available 
 
 This script is designed to be included in the distribution of your Unity plugin:
 
-1.  Clone the repo into your Unity script directory.
+1.  Clone the repo into your Unity script directory. Delete the directory `DELETE_ME` as it contains some test stuff.
 2.  Instantiate the checker:
 
         void OnEnable() {
@@ -29,7 +29,7 @@ Tested in editor windows but should work inside custom inspectors.
 
 ## Rate limiting
 
-Auto-check is disabled by default because **GitHub rate limits your IP to 60 requests per hour (once per minute)**. If multiple Unity scripts use this plugin it will cause them all to break. Use that toggle wisely.
+Auto-check is disabled by default because **GitHub rate limits your IP to 60 requests per hour**. If multiple Unity scripts use this plugin it will cause them all to break. Use that toggle wisely.
 
 ## Properties - Configuration
 
